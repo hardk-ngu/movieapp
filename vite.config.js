@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 const path = require('path')
 import styleImport, { VantResolve } from 'vite-plugin-style-import'
 export default defineConfig({
+  base: './',
   plugins: [vue(), styleImport({ resolves: [VantResolve()] })],
   css: {
     preprocessorOptions: {
