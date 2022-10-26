@@ -4,6 +4,9 @@ const path = require('path')
 import styleImport, { VantResolve } from 'vite-plugin-style-import'
 export default defineConfig({
   base: './',
+  build: {
+    outDir: 'docs'
+  },
   plugins: [vue(), styleImport({ resolves: [VantResolve()] })],
   css: {
     preprocessorOptions: {
